@@ -78,12 +78,11 @@
       <label class="layui-form-label">商品类型</label>
       <div class="layui-input-block">
         <select name="shopping_type" id="shopping_type" lay-filter="aihao">
-          <option value="1">蘑法食育</option>
-          <option value="2">探索课堂</option>
-          <option value="3">星创意</option>
-          <option value="4">田园营期</option>
-          <option value="5">亲子Culb</option>
-          <option value="6">未来营会</option>
+          <option value="1">探索课</option>
+          <option value="2">营地家</option>
+          <option value="3">名师汇</option>
+          <option value="4">星创意</option>
+          <option value="5">UP+</option>
         </select>
       </div>
     </div>
@@ -174,6 +173,21 @@
               <button type="button" class="layui-btn" id="test-upload-testListAction2">开始上传</button>
             </div> 
           </div>
+        </div>
+      </div>
+
+      <div class="layui-fluid">
+        <div class="layui-row layui-col-space15">
+
+          <div class="layui-col-md12">
+            <div class="layui-card">
+              <div class="layui-card-header">视频重传</div>
+              <div class="layui-card-body">
+                <button type="button" class="layui-btn" id="test-upload-video"><i class="layui-icon"></i>上传视频</button>
+              </div>
+            </div>
+          </div>
+          
         </div>
       </div>
       
@@ -456,7 +470,22 @@
       tds.eq(3).find('.test-upload-demo-reload').removeClass('layui-hide'); //显示重传
     }
   });
-           
+
+    upload.render({
+    elem: '#test-upload-video'
+    ,url: 'https://www.hattonstar.com/editOne'
+    ,size:1024
+    ,data:{
+      'path': 'video',
+      'id':Id
+    }
+    ,accept: 'video' //视频
+    ,done: function(res){
+      if (res.code == 0) {
+        return layer.msg('视频替换成功');
+      }
+    }
+  });  
   })
   </script>
 </body>

@@ -33,12 +33,11 @@
                 <div class="layui-input-block">
                   <select name="shopping_type" lay-filter="aihao">
                     <option value="" selected=""></option>
-                    <option value="1">蘑法食育</option>
-                    <option value="2">探索课堂</option>
-                    <option value="3">星创意</option>
-                    <option value="4">田园营期</option>
-                    <option value="5">亲子Culb</option>
-                    <option value="6">未来营会</option>
+                    <option value="1">探索课</option>
+                    <option value="2">营地家</option>
+                    <option value="3">名师汇</option>
+                    <option value="4">星创意</option>
+                    <option value="5">UP+</option>
                   </select>
                 </div>
               </div>
@@ -184,8 +183,7 @@
   </div>
 
 
-<!-- 
-    <div class="layui-fluid">
+  <div class="layui-fluid">
     <div class="layui-row layui-col-space15">
 
       <div class="layui-col-md12">
@@ -194,14 +192,13 @@
           <div class="layui-card-body">
             <button type="button" class="layui-btn" id="test-upload-video"><i class="layui-icon"></i>上传视频</button>
             <button type="button" class="layui-btn layui-hide" id="test-upload-repeat-video"><i class="layui-icon"></i>重新上传</button>
-             <button type="button" class="layui-btn" id="test-upload-type4"><i class="layui-icon"></i>上传音频</button>
           </div>
         </div>
       </div>
       
     </div>
   </div>
- -->
+
 
 
     <div class="layui-fluid">
@@ -522,7 +519,7 @@
       ,url: 'https://www.hattonstar.com/uploadOneRepeat'
       ,size:1024
       ,data:{
-        'path': 'title',
+        'path': 'video',
         'id':upVideoId
       }
       ,accept: 'video' //视频
@@ -530,43 +527,12 @@
        return layer.msg('视频上传成功');
       }
     });
-
-
-
         return layer.msg(res.msg);
       }
     });
 
     return false;
   });
-
-    //选完文件后不自动上传
-    // upload.render({
-    //   elem: '#test-upload-change'
-    //   ,url: 'https://www.hattonstar.com/uploadOne'
-    //   ,size:1024
-    //   ,data:{
-    //     'path': 'title',
-    //     'type':1,
-    //     'parent_id':Id
-    //   }
-    //   ,auto: false
-    //   //,multiple: true
-    //   ,bindAction: '#test-upload-change-action'
-    //   ,done: function(res){
-    //     console.log(res)
-    //     console.log(Id);
-    //     if (res.code == 0) {
-    //         console.log(Id);
-    //         $("#test-upload-change").addClass('layui-hide');
-    //         $("#test-upload-repeat").removeClass('layui-hide');
-    //         $("#test-upload-change-action").addClass('layui-hide');
-    //         $("#test-upload-repeat-action").removeClass('layui-hide');
-    //         uploadId = res.data.image_id;
-    //        return layer.msg('标题图片上传成功');
-    //     }
-    //   }
-    // });
   
   });
   </script>

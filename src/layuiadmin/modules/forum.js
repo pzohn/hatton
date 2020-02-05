@@ -175,7 +175,7 @@ layui.define(['table', 'form'], function(exports){
           submit.trigger('click');
         }
         ,success: function(layero, index){
-          var mapType = new Map([['蘑法食育', 1], ['探索课堂', 2], ['星创意', 3], ['田园营期',4], ['亲子Culb', 5], ['未来营会', 6]]);
+          var mapType = new Map([['探索课', 1], ['营地家', 2], ['名师汇', 3], ['星创意',4], ['UP+', 5]]);
           var body = layer.getChildFrame('body', index);
           body.find("#shoping_name").val(obj.data.name);
           body.find("#shoping_price").val(obj.data.price);
